@@ -83,7 +83,7 @@ findDisplay 12 displayaddEventHandler
 
         _myMarkerName = "_USER_DEFINED #" + str clientOwner + "/" + str _newMarkerID + "/" + str currentChannel;
 				_myColor = player getVariable ["buur_straight_lines_myColor","colorBlack"];
-        _mywidth = (sqrt worldsize)/7.5;
+        _mywidth = (sqrt worldsize)/5;
 
         _myMarkerName = createMarker [_myMarkerName,_myCenterCoordinates];
         _myMarkerName setMarkerShape "RECTANGLE";
