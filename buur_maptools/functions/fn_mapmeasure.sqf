@@ -5,6 +5,8 @@ Written by buur (derbuur@googlemail.com)
 
 */
 if (!hasInterface) exitWith {};
+	_nul = [] spawn {
+	  waitUntil {!isnull (findDisplay 12)};
 findDisplay 12 displayaddEventHandler ["MouseButtonDown",
 	{if (_this select 5) then
 		{
@@ -26,6 +28,10 @@ findDisplay 12 displayaddEventHandler ["MouseButtonDown",
 		}
 	}
 	];
+};
+
+_nul1 = [] spawn {
+  waitUntil {!isnull (findDisplay 12)};
 findDisplay 12 displayaddEventHandler ["MouseButtonUp",
 	{if ((isnil str (player getVariable "buur_mapmeasurere_myDistance")) && ((player getVariable "buur_mapmeasurere_myDistance") > 1)) then
 		{
@@ -48,3 +54,4 @@ findDisplay 12 displayaddEventHandler ["MouseButtonUp",
 			((findDisplay 12) displayCtrl 51) ctrlRemoveEventHandler ["MouseMoving",_id_MouseMoving];
 		};
 	}];
+};
